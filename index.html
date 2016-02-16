@@ -61,193 +61,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-title" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/15/title/" class="article-date">
-  <time datetime="2016-02-15T12:11:03.000Z" itemprop="datePublished">2016-02-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/15/title/">title</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="在Koding云平台上搭建Hexo环境"><a href="#在Koding云平台上搭建Hexo环境" class="headerlink" title="在Koding云平台上搭建Hexo环境"></a>在Koding云平台上搭建Hexo环境</h1><p>=</p>
-<ol>
-<li><p>-</p>
-</li>
-</ol>
-<p>利用 Koding 云平台，用户无需在本地安装配置Node.js 环境。 虽然需要配置 Koding 上的环境，但由于环境配置在云端，可以跨平台编写发布，只要有网络，手机，平板都可以操作！</p>
-<h3 id="Koding-介绍"><a href="#Koding-介绍" class="headerlink" title="Koding 介绍"></a>Koding 介绍</h3><p><img src="resources/4B83CFAB61F1AC41AF262305438BC1E0.png" alt="Koding"></p>
-<p>Koding 是个云端开发与社区平台，提供 Linux 虚拟主机环境及完整的 WebUI， 可以通过浏览器在 Koding 上进行主机配置、假设网站与系统开发测试等。</p>
-<ul>
-<li>koding 提供完整 Linux 操作系统 (Ubuntu 13.04, Raring Ringtail)</li>
-<li>提供 sudo 以安装系统软件与操作</li>
-<li>预装 npm</li>
-<li>预装 git</li>
-<li>预装 apache</li>
-</ul>
-<blockquote>
-<p>koding.com这是一个免费的云端开发平台，也相当于通过浏览器去操作一个VM (virtual machine)，可以完全依照自己的需要去部属开发环境、架设网站等等，这主机也可以执行JavaScript、PHP、Perl、Python、Ruby等语言，写完可以在线上预览、执行。不过要注意的是有基本容量限制3G。</p>
-<p>他也有社交的功能，就像一般社交网站一般，可以发文分享、讨论交流，也有为数不少不同类型的Group，他把社交化功能与Web IDE结合得还不错。遇到一些开发相关问题，也还可以通过线上的社群直接发问。</p>
-</blockquote>
-<p>先介绍如何设定 Koding 上的环境</p>
-<h3 id="预备工作"><a href="#预备工作" class="headerlink" title="预备工作"></a>预备工作</h3><ul>
-<li><a href="https://github.com/" target="_blank" rel="external">Github</a> 帐号<a href="https://github.com/" target="_blank" rel="external">（点此申请 Github 帐号）</a></li>
-<li><a href="https://koding.com/R/kywk" target="_blank" rel="external">Koding</a> 帐号<a href="https://koding.com/R/kywk" target="_blank" rel="external">（点此申请 Koding 帐号）</a></li>
-</ul>
-<p>申请方式和一般网站大同小异，我很懒这儿就跳过不介绍如何申请了。</p>
-<p>帐号申请后请记得收信验证账户。</p>
-<p>安装 Hexo 执行环境</p>
-<p>注册后连上 Koding 网站，点选左上方功能列的 “Terminal”，可看到画面如下：</p>
-<p><img src="resources/4998D1CA25F0C4B47AED5D9F3EECCC9F.jpg" alt="Terminal on Koding"></p>
-<p>因 Koding 已预装好 Node.js / npm 环境，直接输入下列命令即可安装 Hexo 系统</p>
-<pre><code>1
-
-$ sudo npm install -g hexo
-</code></pre><p>输入后会看到 npm 开始安装 hexo 如下：</p>
-<pre><code>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-
-npm http GET https://registry.npmjs.org/hexo
-npm http 304 https://registry.npmjs.org/hexo
-npm http GET https://registry.npmjs.org/async/0.2.9
-npm http GET https://registry.npmjs.org/express/3.4.7
-...
-...
-...
-hexo@2.4.5 /usr/lib/node\_modules/hexo
-├── graceful-fs@2.0.1
-├── sprintf-js@0.0.7
-├── colors@0.6.2
-├── marked@0.3.0
-├── async@0.2.9
-├── chokidar@0.8.1
-├── ejs@0.8.5
-├── highlight.js@8.0.0
-├── optimist@0.6.0 (wordwrap@0.0.2, minimist@0.0.5)
-├── lodash@2.4.1
-├── moment@2.5.0
-├── stylus@0.42.0 (css-parse@1.7.0, debug@0.7.4, mkdirp@0.3.5, glob@3.2.8, sax@0.5.8)
-├── warehouse@0.1.12 (lodash@2.2.1)
-├── yamljs@0.1.4 (glob@3.1.21, argparse@0.1.15)
-├── nib@1.0.2 (stylus@0.37.0)
-├── swig@1.2.2 (uglify-js@2.4.10)
-└── express@3.4.7 (methods@0.1.0, merge-descriptors@0.0.1, range-parser@0.0.4, cookie-signature@1.0.1, fresh@0.2.0, debug@0.7.4, buffer-crc32@0.2.1, cookie@0.1.0, mkdirp@0.3.5, commander@1.3.2, send@0.1.4, connect@2.12.0)
-</code></pre><p>跑完后可以执行 <code>hexo</code> 确认是否已正确安装</p>
-<pre><code>1
-
-$ hexo
-</code></pre><p>若 hexo 安装正确，会出现如下信息：</p>
-<pre><code>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-
-Usage: hexo \&lt;command\&gt;
-
-Commands:
- help Get help on a command
- init Create a new Hexo folder
- migrate Migrate your site from other system to Hexo
- version Display version information
-
-Global Options:
- --config Specify config file instead of using \_config.yml
- --debug Display all verbose messages in the terminal
- --safe Disable all plugins and scripts
- --silent Hide output on console
-
-For more help, you can use `hexo help [command]` for the detailed information
-or you can check the docs: http://zespia.tw/hexo/docs/
-</code></pre><p>之后执行npm install完成安装</p>
-<p>启动本地服务：hexo server</p>
-<h2 id="设定-Hexo-部落格专案资料夹"><a href="#设定-Hexo-部落格专案资料夹" class="headerlink" title="设定 Hexo 部落格专案资料夹"></a>设定 Hexo 部落格专案资料夹</h2><p>安装完 <code>hexo</code> 后需要建立 hexo 博客文件夹，里面存放博客文章、主题、Plugins…等。</p>
-<h3 id="Init-hexo-blog-folder"><a href="#Init-hexo-blog-folder" class="headerlink" title="Init hexo blog folder"></a>Init hexo blog folder</h3><p>通过下列命令可在 Koding VM 的 <code>{$HOME}/blog</code> 建立 hexo 专案资料夹</p>
-<pre><code><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd</span><br><span class="line"><span class="variable">$ </span>mkdir blog</span><br><span class="line"><span class="variable">$ </span>cd blog</span><br><span class="line"><span class="variable">$ </span>hexo init</span><br></pre></td></tr></table></figure>
-</code></pre><p>输入后可看到 Hexo 初始化文件夹如下：</p>
-<pre><code><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">info</span>] Creating <span class="keyword">file</span>: <span class="keyword">source</span>/_posts/hello-world.md</span><br><span class="line">[<span class="keyword">info</span>] Creating <span class="keyword">file</span>: <span class="keyword">package</span>.json</span><br><span class="line">[<span class="keyword">info</span>] Creating <span class="keyword">file</span>: .gitignore</span><br><span class="line">[<span class="keyword">info</span>] Copying <span class="keyword">file</span>: _config.yml</span><br><span class="line">[<span class="keyword">info</span>] Copying <span class="keyword">file</span>: scaffolds/draft.md</span><br><span class="line">[<span class="keyword">info</span>] Copying <span class="keyword">file</span>: scaffolds/page.md</span><br><span class="line">[<span class="keyword">info</span>] Copying <span class="keyword">file</span>: scaffolds/photo.md</span><br><span class="line">[<span class="keyword">info</span>] Copying <span class="keyword">file</span>: scaffolds/post.md</span><br><span class="line">[<span class="keyword">info</span>] Creating folder: <span class="keyword">source</span>/_drafts</span><br><span class="line">[<span class="keyword">info</span>] Creating folder: scripts</span><br><span class="line">[<span class="keyword">info</span>] Copying theme data...</span><br><span class="line">[<span class="keyword">info</span>] Initialization has been done. Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><p><a href="http://goo.gl/5MBsGm" target="_blank" rel="external">Themes</a> 这儿有 Hexo 博客主题列表，可找个喜欢的博客主题。 大多数的博客主题安装方式都雷同。以下以 <a href="http://goo.gl/HwBaX3" target="_blank" rel="external">AWE</a> 为范例说明：</p>
-<pre><code><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/blog</span><br><span class="line">$ git clone https:/</span><span class="regexp">/github.com/kywk</span><span class="regexp">/hexo-theme-awe.git themes/awe</span></span><br></pre></td></tr></table></figure>
-</code></pre><p>利用 <code>Koding</code> 的编辑器修改 <code>_config.yml</code>，将 <code>theme</code> 设成 <code>awe</code> <code>_config.yml</code> 为博客主要设定信息，博客标题、作者信息也在这个文件进行设定。</p>
-<p>在 Koding 的编辑器看到资料夹结构如下图：</p>
-<p><img src="resources/F50497DD972F1BE54C68C6E64690BD36.jpg" alt=""></p>
-<h2 id="配置-Github"><a href="#配置-Github" class="headerlink" title="配置 Github"></a>配置 Github</h2><p>Hexo 生成的博客为静态文件，可直接 hosting 在任何 Web Server 上，相当多人将其放置于 Github 上。 Github Page 分成 Personal/Project 两种，本文仅介绍 Personal Page 的设置。</p>
-<h3 id="Github-Page-设定"><a href="#Github-Page-设定" class="headerlink" title="Github Page 设定"></a>Github Page 设定</h3><p>先在 Github 上建立一个新的 repository，名称需为 <code>你的帐号.github.io</code></p>
-<p><img src="resources/595039E2500286E6AABDE1FC923786F0.png" alt=""></p>
-<p><img src="resources/042A38080C94DA18D9FFEDF9EDAB4CE1.png" alt=""></p>
-<p>然后修改 <code>_config.yml</code> 中 deploy 信息如下，可直接利用 <code>Koding ACE</code> 编辑器进行修改</p>
-<pre><code><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/你的帐号/你的帐号.github.com.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="ssh-key"><a href="#ssh-key" class="headerlink" title="ssh-key"></a>ssh-key</h3><p>为方便存取 Github，建议创建 ssh-key。以下仅简述步骤，详细介绍在 <a href="http://goo.gl/lyu73" target="_blank" rel="external">Generating SSH Keys · GitHub Help</a></p>
-<p>在终端机输入指令：</p>
-<pre><code><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="char">$ </span>ssh-keygen -t rsa -<span class="class">C</span> <span class="comment">"your\_email@example.com"</span></span><br></pre></td></tr></table></figure>
-</code></pre><p>利用编辑器开启 <code>~/.ssh/id_rsa.pub</code>，参考 <a href="http://goo.gl/lyu73" target="_blank" rel="external">Generating SSH Keys</a> Step3 的步骤， 将 <code>~/.ssh/id_rsa.pub</code> 的内容贴上 Github.</p>
-<h2 id="Happy-blogging"><a href="#Happy-blogging" class="headerlink" title="Happy blogging"></a>Happy blogging</h2><p>上述步骤完成后，即可利用浏览器在 Koding 上正常操作 Hexo 来建立博客文章与发布到 github 了。</p>
-<p>建立新文章</p>
-<pre><code><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="string">"title"</span></span><br></pre></td></tr></table></figure>
-</code></pre><p>发布到 github</p>
-<pre><code><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo d (deploy)</span><br></pre></td></tr></table></figure>
-</code></pre><p>在 Koding 上建立 hexo 环境最大的好处是跨平台、无需本地配置，可以随时随地编写博客文章， 无须安装 Node.js / Git / … 等开发工具。 然而文章都放在 Koding 上亦有网络速度不佳与存取不便的缺点。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/15/title/" data-id="cikny07ic00012q4hs0bk4hz0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/14/hello-world/" class="article-date">
@@ -283,7 +96,7 @@ or you can check the docs: http://zespia.tw/hexo/docs/
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/14/hello-world/" data-id="cikny07i600002q4hwoeizdyr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/14/hello-world/" data-id="cikosg1yt0000174h3smi8q1p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +121,7 @@ or you can check the docs: http://zespia.tw/hexo/docs/
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -318,10 +131,6 @@ or you can check the docs: http://zespia.tw/hexo/docs/
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2016/02/15/title/">title</a>
-          </li>
         
           <li>
             <a href="/2016/02/14/hello-world/">Hello World</a>
