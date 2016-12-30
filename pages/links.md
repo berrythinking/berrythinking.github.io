@@ -8,9 +8,10 @@ menu: 链接
 permalink: /links/
 ---
 
-> God made relatives. Thank God we can choose our friends.
 
-* [Connie酱](http://biedan.org)
-* [只宁静不致远](http://zxning.github.io/)
-* [Blog Something](http://chenxiaoyoyo.github.io)
+* [Loy Home Service](https://www.loyservice.com)
+* [Loy Auto Rental](https://www.loyauto.com/)
+* [China VPN Service](https://www.chinavpnservice.com)
 * [码志](http://mazhuang.org)
+
+
