@@ -97,7 +97,8 @@ twitter_username: XXXX
 comments_provider: disqus
 # !!!重要!!! 请修改下面两个用户名为你自己申请的
 # !!!Important!!! Please modify usernames below to yours
-disqus_username: 16t
+disqus:
+    username:16t
 # 在使用 disqus 的时候可点击显示多说评论框
 
 # ---------------- #
@@ -109,4 +110,4 @@ google:
 # ---------------- #
 #      Datas       #
 # ---------------- #
-skill_software_keywords: [Linux, AWS, Python, Wordpress]
+skill_software_keywords: [Linux, macOS, AWS, GCP, Python, Wordpress]
