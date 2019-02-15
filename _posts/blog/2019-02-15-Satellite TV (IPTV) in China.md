@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Satellite TV （IPTV) in China: Everybody’s Doing It, Why Aren’t You?
+title: Satellite TV (IPTV) in China: Everybody’s Doing It, Why Aren’t You?
 categories: [IT&数码]
 description: About a month ago, I was sitting with a good friend of mine talking about the things we miss from back home and he told me that he watched German television every evening for his daily dose of modern German culture. Even though satellite reception in China is nothing new, this still shocked me a bit, so I asked him how he got satellite service in Chengdu.
 keywords: Satellite, TV, IPTV, SKY, Set-Top-Tox, 订阅
