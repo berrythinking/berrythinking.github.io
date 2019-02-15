@@ -22,7 +22,7 @@ Check this place out. Not only do they offer an array of different satellite se
 
 One of the flyers I received in my mailbox offering satellite services among other things
 
-![](https://i.loli.net/2019/02/15/5c6625be6197c.jpg)
+![1-2](https://i.loli.net/2019/02/15/5c6625be6197c.jpg)
 
 Obviously, the main market for these Shanghai based satellite hustlers consists of expats who aren’t trying to watch re-re-runs of Journey to the West, or some dramatic re-enactment of Chinese bravery in the face of Japanese aggression, or yet another period piece with stolid gong fu guys and whiny women. Standard television sucks, in my opinion, but none as hard as Chinese TV.
 But all that’s changing. According to studies, the market for satellite TV equipment (dishes and related items) will reach into the billions within two years.
