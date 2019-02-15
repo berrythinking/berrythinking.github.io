@@ -21,7 +21,7 @@ permalink: /about/
 * GitHub：[@berrythinking](https://github.com/berrythinking)
 * LinkedIn：[@Athen](https://www.linkedin.com/in/athen)
 * 博客: [{{ site.title }}]({{ site.url }})
-* 知乎: [@/aizhaoteng](http://www.zhihu.com/people//aizhaoteng)
+* 知乎: [@aizhaoteng](http://www.zhihu.com/people/aizhaoteng)
 
 ## Skill Keywords
 
