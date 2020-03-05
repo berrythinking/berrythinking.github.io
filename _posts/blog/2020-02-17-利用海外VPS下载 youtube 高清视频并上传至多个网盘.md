@@ -7,7 +7,7 @@ keywords: Google, AWS, youtube, google drive, 百度云, onedrive, ffmpeg, aria2
 ---
 一直用 ```y2mate``` 从 youtube 下载1080P 高清视频，但是最近下载的时候 expressvpn 不能用了， 一直没有速度，导出 aria2 也是一样，多方研究发现可以用海外的 vps 加速下载。
 
-#安装 Youtube-dl
+# 安装 Youtube-dl
 ```
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
@@ -16,13 +16,13 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 sudo -H pip install --upgrade youtube-dl
 ```
-#CentOS 中安装 ffmpeg
-##1.升级系统
+# CentOS 中安装 ffmpeg
+## 1.升级系统
 ```
 sudo yum install epel-release -y
 sudo yum update -y
 ```
-##2.安装必要组件
+## 2.安装必要组件
 Centos：
 ```
 yum install gcc gcc-c++ autoconf automake
@@ -38,24 +38,24 @@ CentOS
 ```
 yum install yasm
 ```
-##2.安装Nux Dextop Yum 源
+## 3.安装Nux Dextop Yum 源
 由于CentOS没有官方```FFmpeg rpm```软件包。但是，我们可以使用第三方YUM源```Nux Dextop```完成此工作。
 
 ```
 sudo rpm –import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 ```
-##3.安装FFmpeg 和 FFmpeg开发包
+## 4.安装FFmpeg 和 FFmpeg开发包
 如果你不打算下载1080P 及以上分辨率的话，是没必要安装FFmpeg的。
 ```
 sudo yum install ffmpeg ffmpeg-devel -y
 ```
-##4.测试是否安装成功
+## 5.测试是否安装成功
 ```
 ffmpeg
 ```
 
-#下载 Youtube 视频
+# 下载 Youtube 视频
 
 下载 youtube 的视频就很简单了，比如下面这条命令，会自动下载最高分辨率的视频
 
@@ -91,14 +91,14 @@ youtube-dl -f 137+140 https://www.youtube.com/watch?v=SLaYPmhse30
 
 ffmpeg 的功能也非常强大，如果感兴趣，自己百度吧。
 
-##不足
+## 不足
 虽然 youtube-dl 下载视频非常方便，但是缺点也很明显，就是只能单线程下载，找遍youtube-dl给的参数，都没发现自带有多线程。
 
 这时候就需要我们和 Aria2 组合使用，实现多线程下载，会有更快的下载速度，节约等待时间。
 
-#Aria2
-##一、安装aria2
-###1、安装aria2的方法很简单，一条命令就够了
+# Aria2
+## 一、安装aria2
+### 1、安装aria2的方法很简单，一条命令就够了
 
 centos 7：
 ```
@@ -118,7 +118,7 @@ aria2c 文件地址
 ![aria2下载](https://pic.mikucdn.com/wp-image/2019/01/20190114143245.png)
 若出现如图所示的结果则说明Aria2已安装成功。
 
-###2、下载安装好了以后，远程下载文件就很简单了
+### 2、下载安装好了以后，远程下载文件就很简单了
 
 单个文件下载
 ```
@@ -151,7 +151,7 @@ aria2c -S bit.torrent
 ![aria2](https://pic1.zhimg.com/80/v2-3ed8cb46671da8b86ddcd0d656067ad8_hd.jpg)
 
 
-###Youtube-dl 调用 Aria2 下载
+### Youtube-dl 调用 Aria2 下载
 Youtube-dl调用外部Aria2多线程下载工具的方法非常简单，我们就以这个视频地址为例吧：https://www.youtube.com/watch?v=LVBM8Gv3mSo
 
 一般来说，使用这条命令就够了（如果你安装了FFmpeg，会直接下载4K分辨率）
@@ -160,7 +160,7 @@ youtube-dl    https://www.youtube.com/watch?v=LVBM8Gv3mSo   --external-downloade
 ```
 
 参数说明：
-
+```
 --external-downloader aria2c     //调用外部下载工具aria2
 
 --external-downloader-args      //外部下载工具指定参数
@@ -170,15 +170,16 @@ youtube-dl    https://www.youtube.com/watch?v=LVBM8Gv3mSo   --external-downloade
 -K 1M      //指定块的大小
 
 -f 22      //下载油管720p视频，用法请参考 
+```
 ![youtube-dl](http://www.138vps.com/content/uploadfile/201807/c5361531961979.jpg)
 
 我一般会配合 -P 参数来查看下载进度。
 
-#VPS 与国外网盘之间进行文件传输
+# VPS 与国外网盘之间进行文件传输
 下载完成之后我们需要把他传到自己的网盘里面，如果是国外的网盘（主要是 google drive 和微软的 onedrive)，推荐使用 Rclone.
 
-#安装并设置Rclone
-##1、安装rclone
+# 安装并设置Rclone
+## 1、安装rclone
 ```
 curl https://rclone.org/install.sh | sudo bash
 ```
@@ -375,29 +376,29 @@ Github地址：https://github.com/houtianze/bypy
 ####安装pip：
 
 ```
-#CentOS 6.x 32位
+# CentOS 6.x 32位
 rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 yum install -y python-pip
 
-#CentOS 6.x 64位
+# CentOS 6.x 64位
 rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y python-pip
 
-#CentOS 7.x
+# CentOS 7.x
 yum install -y epel-release
 yum install -y python-pip
-#如果CentOS 7安装出现No package python-pip available，可以用以下命令进行安装
+# 如果CentOS 7安装出现No package python-pip available，可以用以下命令进行安装
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 
-#Debian/Ubuntu系统
+#  Debian/Ubuntu系统
 apt-get -y update
 apt-get -y install python-pip
 安装pip3：
 
-#CentOS系统
+# CentOS系统
 wget https://www.moerats.com/usr/shell/Python3/CentOS_Python3.6.sh && sh CentOS_Python3.6.sh
-#Debian系统
+# Debian系统
 wget https://www.moerats.com/usr/shell/Python3/Debian_Python3.6.sh && sh Debian_Python3.6.sh
 ```
 
@@ -421,14 +422,14 @@ pip3 install bypy
 ![bypy-info](https://www.moerats.com/usr/picture/BYPY.png)
 安装完成后可以看到，在你的百度网盘的【我的应用数据】下面已经多了一个【bypy】目录，你以后通过VPS所上传的文件都会在这个目录下面，你也只能下载这个目录里面的文件。
 
-####操作命令
-#####1、显示网盘根目录(bypy)的文件列表：
+#### 操作命令
+##### 1、显示网盘根目录(bypy)的文件列表：
 ```bypy list```
-#####2、比较当前目录和网站根目录文件：
+##### 2、比较当前目录和网站根目录文件：
 ```bypy compare```
-#####3、上传单个文件的命令如下：
+##### 3、上传单个文件的命令如下：
 ```bypy upload 文件名```
-#####4、把当前目录上传到云盘：
+##### 4、把当前目录上传到云盘：
 
 ```bypy syncup 目录地址```
 or
