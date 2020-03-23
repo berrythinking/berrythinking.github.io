@@ -187,7 +187,7 @@ curl https://rclone.org/install.sh | sudo bash
 ```
 curl https://rclone.org/install.sh | sudo bash -s beta
 ```
-2、初始化配置
+## 2、初始化配置
 ```
 rclone config
 ```
@@ -355,7 +355,7 @@ e/n/d/r/c/s/q> q  #输入q保存退出
 ![onedrive-confirm](https://omo.moe/usr/uploads/2019/02/1662802672.png)
 之后就可以使用 rclone 命令来进行 vps 与网盘之间的文件传输了。
 
-#VPS 与百度网盘进行数据传输
+# VPS 与百度网盘进行数据传输
 
 BYPY一个百度云/百度网盘的Python客户端。主要的目的就是在Linux环境下（Windows下应该也可用，但没有仔细测试过）通过命令行来使用百度云盘的2TB的巨大空间。它提供文件列表、下载、上传、比较、向上同步、向下同步，等操作。
 
@@ -367,13 +367,13 @@ Github地址：https://github.com/houtianze/bypy
 
 百度云PCS API地址：[点击进入](http://developer.baidu.com/wiki/index.php?title=docs/pcs/rest/file_data_apis_list)
 
-##安装
+## 安装
 系统要求：```Python```版本要求```2.7+```，```3.3+```。可以使用命令```python -V```查看Python版本。当然建议系统越新越好，这样Python版本自然就高了。
 
-###1、安装pip或pip3
+### 1、安装pip或pip3
 ```pip```或```pip3```随便选择一个安装即可。
 
-####安装pip：
+#### 安装pip：
 
 ```
 # CentOS 6.x 32位
@@ -402,22 +402,22 @@ wget https://www.moerats.com/usr/shell/Python3/CentOS_Python3.6.sh && sh CentOS_
 wget https://www.moerats.com/usr/shell/Python3/Debian_Python3.6.sh && sh Debian_Python3.6.sh
 ```
 
-####查看是否安装成功
+#### 查看是否安装成功
 ```
 pip3 -V
 ```
-###2、安装bypy
+### 2、安装bypy
 
-####pip安装
+#### pip安装
 ```
 pip install bypy
 ```
 
-###pip3安装
+### pip3安装
 ```
 pip3 install bypy
 ```
-####授权
+#### 授权
 执行 ```bypy info``` 命令，然后会给一个链接，用浏览器打开，将授权码复制过来即可。
 ![bypy-info](https://www.moerats.com/usr/picture/BYPY.png)
 安装完成后可以看到，在你的百度网盘的【我的应用数据】下面已经多了一个【bypy】目录，你以后通过VPS所上传的文件都会在这个目录下面，你也只能下载这个目录里面的文件。
