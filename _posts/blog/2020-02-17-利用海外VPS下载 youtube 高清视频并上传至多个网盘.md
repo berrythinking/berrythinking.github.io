@@ -341,18 +341,30 @@ s) Set configuration password
 q) Quit config
 e/n/d/r/c/s/q> q  #输入q保存退出
 ```
-如果是要连接 onedrive 的话，那么需要在本地安装 Rclone 并使用 ```rclone authorize "onedrive" 并获取授权码。
+如果是要连接 onedrive 的话，那么需要在本地安装 Rclone 并使用 ```rclone authorize "onedrive" ```并获取授权码。
+
 ![onedrive-authorize](https://omo.moe/usr/uploads/2019/02/1662802672.png)
+
 之后会弹出浏览器，要求输入微软的账号和密码登录。
+
 ![onedrive-login](https://omo.moe/usr/uploads/2019/02/3146682821.png)
+
 点击同意
+
 ![onedrive-agree](https://omo.moe/usr/uploads/2019/02/108776614.png)
+
 返回成功页面
+
 ![onedrive-success](https://omo.moe/usr/uploads/2019/02/1787560041.png)
+
 之后本地终端会获取到授权码
+
 ![onedrive-code](https://omo.moe/usr/uploads/2019/02/1787560041.png)
+
 粘贴到 vps 窗口中并回车
+
 ![onedrive-confirm](https://omo.moe/usr/uploads/2019/02/1662802672.png)
+
 之后就可以使用 rclone 命令来进行 vps 与网盘之间的文件传输了。
 
 # VPS 与百度网盘进行数据传输
@@ -363,7 +375,7 @@ BYPY一个百度云/百度网盘的Python客户端。主要的目的就是在Lin
 
 据说百度PCS API最多返回目录下1000个文件（#306)，如果属实，百度云盘上若有超过1000个文件的目录，将有一部分文件无法被看到/下载。
 
-Github地址：https://github.com/houtianze/bypy
+Github地址：[Github](https://github.com/houtianze/bypy)
 
 百度云PCS API地址：[点击进入](http://developer.baidu.com/wiki/index.php?title=docs/pcs/rest/file_data_apis_list)
 
@@ -371,7 +383,7 @@ Github地址：https://github.com/houtianze/bypy
 系统要求：```Python```版本要求```2.7+```，```3.3+```。可以使用命令```python -V```查看Python版本。当然建议系统越新越好，这样Python版本自然就高了。
 
 ### 1、安装pip或pip3
-```pip```或```pip3```随便选择一个安装即可。
+```pip``` 或 ```pip3``` 随便选择一个安装即可。
 
 #### 安装pip：
 
@@ -403,23 +415,21 @@ wget https://www.moerats.com/usr/shell/Python3/Debian_Python3.6.sh && sh Debian_
 ```
 
 #### 查看是否安装成功
-```
-pip3 -V
-```
+```pip3 -V```
+
 ### 2、安装bypy
 
 #### pip安装
-```
-pip install bypy
-```
+```pip install bypy```
 
 ### pip3安装
-```
-pip3 install bypy
-```
+```pip3 install bypy```
+
 #### 授权
 执行 ```bypy info``` 命令，然后会给一个链接，用浏览器打开，将授权码复制过来即可。
+
 ![bypy-info](https://www.moerats.com/usr/picture/BYPY.png)
+
 安装完成后可以看到，在你的百度网盘的【我的应用数据】下面已经多了一个【bypy】目录，你以后通过VPS所上传的文件都会在这个目录下面，你也只能下载这个目录里面的文件。
 
 #### 操作命令
@@ -434,9 +444,9 @@ pip3 install bypy
 ```bypy syncup 目录地址```
 or
 ```bypy upload 目录地址```
-#####5、下载单个文件的命令如下：
+##### 5、下载单个文件的命令如下：
 ```bypy downfile 下载文件名```
-#####6、把云盘内容下载到本地来：
+##### 6、把云盘内容下载到本地来：
 
 ```bypy syncdown 目录地址```
 or
